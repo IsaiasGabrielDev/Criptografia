@@ -72,11 +72,6 @@ namespace Lib.Criptografia
             return null;
         }
 
-
-
-
-
-
         static private string Encode(string toEncode)
         {
             byte[] toEncodebyte = System.Text.ASCIIEncoding.UTF8.GetBytes(toEncode);

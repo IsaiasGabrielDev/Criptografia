@@ -23,7 +23,18 @@ namespace CriptografiaInterface
         {
             int opcao = rdCript.Checked ? 0 : 1;
 
-            EscreverLog("Enviado para Criptografia");
+            if(string.IsNullOrEmpty(txtCaminho.Text) || txtCaminho.Text.Contains("File..."))
+            {
+                MessageBox.Show("Selecione o Arquivo", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (string.IsNullOrEmpty(textSenha.Text))
+            {
+                MessageBox.Show("Digite uma Senha para Criptografia", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             Lib.Criptografia.Manager.Menu(txtCaminho.Text, textSenha.Text, opcao);
 
             if (opcao == 0)
