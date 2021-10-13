@@ -72,8 +72,9 @@ namespace Lib.Criptografia
             return null;
         }
 
-            return null;
-        }
+
+
+
 
 
         static private string Encode(string toEncode)
@@ -117,6 +118,6 @@ namespace Lib.Criptografia
         }
 
 
-
     }
 }
+
